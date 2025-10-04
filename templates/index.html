@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Jornada da Dra. Luna</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <!-- Tela do Filme -->
+    <div id="movie-screen">
+      <div id="movie-content">
+        <img
+          id="movie-image"
+          src="{{ url_for('static', filename='dra_luna_1.png') }}"
+          alt="Dra. Luna no laboratório"
+        />
+        <p id="movie-text">
+          Olá, exploradores! Eu sou a Dra. Luna, cientista das maravilhas da
+          natureza!
+        </p>
+        <button id="next-scene-btn" class="movie-btn">▶️ Próxima Cena</button>
+      </div>
+    </div>
+
+    <!-- Tela do Quiz -->
+    <div id="quiz-screen" style="display: none">
+      <h1 id="title">🔬 Laboratório da Dra. Luna</h1>
+      <div id="quiz-container">
+        <!-- O quiz será carregado aqui -->
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='movie.js') }}"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
